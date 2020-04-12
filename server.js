@@ -79,6 +79,7 @@ const resolvers = {
 const server = new ApolloServer({ typeDefs, resolvers });
 
 // The `listen` method launches a web server.
+const PORT = process.env.PORT || 4000;
 mongoose
 	.connect(
 		"mongodb+srv://mehedi:mehedi@mehedi-mw5jy.mongodb.net/Ninja?retryWrites=true&w=majority",
@@ -86,6 +87,6 @@ mongoose
 	)
 	.then(() => {
 		console.log("MongoDB Database Connected");
-		return server.listen({ port: 4000 });
+		return server.listen({ port: PORT });
 	})
 	.then((res) => console.log(`server running at ${res.url}`));
