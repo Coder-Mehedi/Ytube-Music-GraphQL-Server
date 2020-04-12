@@ -1,0 +1,17 @@
+{
+	"name": "apollo-graphql-crud-app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "nodemon server"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"apollo-server": "^2.12.0",
+		"graphql": "^15.0.0",
+		"mongoose": "^5.9.7"
+	}
+}
