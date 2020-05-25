@@ -1,0 +1,4 @@
+{
+	"mongoURI": "mongodb+srv://mehedi:mehedi@mehedi-mw5jy.mongodb.net/ytube-music?retryWrites=true&w=majority",
+	"JWT_SECRET": "SomeSuperSecret"
+}
