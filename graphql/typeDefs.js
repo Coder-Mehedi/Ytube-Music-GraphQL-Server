@@ -3,25 +3,34 @@ const { gql } = require("apollo-server");
 module.exports = gql`
 	type Video {
 		id: String!
-		title: String
-		thumbnail: String
+		title: String!
+		thumbnail: String!
 	}
-	type Music {
+
+	type PopularMusic {
 		id: String!
 		title: String!
 		channelTitle: String!
 		thumbnails: Thumbnails!
 		statistics: Statistics!
 	}
+
+	type SearchMusic {
+		id: String!
+		title: String!
+		channelTitle: String!
+		thumbnails: Thumbnails!
+	}
+
 	type Thumbnails {
 		high: String!
 	}
 
 	type Statistics {
-		viewCount: String
-		likeCount: String
-		dislikeCount: String
-		commentCount: String
+		viewCount: String!
+		likeCount: String!
+		dislikeCount: String!
+		commentCount: String!
 	}
 
 	type User {
@@ -43,8 +52,8 @@ module.exports = gql`
 	type Query {
 		getWatchedVideos: [Video]!
 		getLikedVideos: [Video]!
-		popularMusic: [Music]!
-		searchMusic(artist: String!, title: String!): [Music]
+		popularMusic: [PopularMusic]!
+		searchMusic(artist: String!, title: String!): [SearchMusic]!
 	}
 
 	type Mutation {
