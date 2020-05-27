@@ -3,6 +3,7 @@ const { gql } = require("apollo-server");
 module.exports = gql`
 	type Video {
 		id: String!
+		videoId: String!
 		title: String!
 		thumbnail: String!
 	}
@@ -59,7 +60,7 @@ module.exports = gql`
 	type Mutation {
 		register(registerInput: RegisterInput): User!
 		login(username: String!, password: String!): User!
-		addWatch(videoId: String!, title: String!, thumbnail: String!): Video!
+		addWatch(videoId: String!, title: String!, thumbnail: String!): Video
 		addLike(videoId: String!, title: String!, thumbnail: String!): Video!
 	}
 `;
