@@ -61,10 +61,8 @@ module.exports = {
 			const { id } = checkAuth(context);
 			const user = await User.findById(id);
 			const found = user.watched.find((video) => video.videoId === videoId);
-			if (found) {
-				console.log(found);
-				return;
-			}
+			if (found) return;
+
 			user.watched.push({ videoId, title, thumbnail });
 			await user.save();
 			return { id: videoId, title, thumbnail };
