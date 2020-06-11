@@ -20,9 +20,7 @@
 					"type": "analytics#webproperties",
 					"href": "https://www.googleapis.com/analytics/v3/management/accounts/62835352/webproperties"
 				}
-			},
-			{},
-			{}
+			}
 		]
 	},
 	"propertyList": {
@@ -123,9 +121,7 @@
 				"lowercaseDetails": {
 					"field": "PAGE_REQUEST_URI"
 				}
-			},
-			{},
-			{}
+			}
 		]
 	}
 }
